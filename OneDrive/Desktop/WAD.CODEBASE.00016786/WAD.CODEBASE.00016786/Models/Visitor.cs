@@ -3,11 +3,18 @@
     public class Visitor
     {
         public int VisitorID { get; set; }
-        public string Name { get; set; }
-        public string Contact { get; set; }
+        public required string Name { get; set; }
+        public required string Contact { get; set; }
         public DateTime CheckInDate { get; set; }
         public DateTime CheckOutDate { get; set; }
-        public Employee EmployeeID { get; set; }
-        public Room RoomID { get; set; }
+
+
+        // Foreign Key to Employee
+        public int EmployeeID { get; set; } // Foreign Key
+        public Employee BookedBy { get; set; } // Navigation Property
+
+        // Foreign Key to Room
+        public int RoomID { get; set; } // Foreign Key
+        public Room Room { get; set; } // Navigation Property
     }
 }

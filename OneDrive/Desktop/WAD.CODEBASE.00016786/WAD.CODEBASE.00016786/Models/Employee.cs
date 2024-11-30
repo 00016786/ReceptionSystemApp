@@ -3,7 +3,8 @@
     public class Employee
     {
         public int EmployeeID { get; set; }
-        public string EmployeeName { get; set; }
-        public string Position { get; set; }
+        public required string EmployeeName { get; set; }
+        public required string Position { get; set; }
+
     }
 }
